@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>إبداع أكاديمي</title>
+     <style>
+     body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          /* خلفية متدرجة مع صورة شفافة مناسبة للتعليم */
+          background:
+               linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%),
+               url('https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80');
+          background-blend-mode: lighten;
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          margin: 0;
+          padding: 0;
+          direction: rtl;
+     }
+
+     header {
+          background: linear-gradient(135deg, #fad961, #f38381);
+          padding: 30px 0 20px 0;
+          text-align: center;
+          color: #6094ea;
+     }
+
+     header h1 {
+          margin: 0 0 10px 0;
+          font-size: 2.2em;
+     }
+
+     nav ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: inline-flex;
+          gap: 30px;
+     }
+
+     nav a {
+          color: #5b247a;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.2s;
+     }
+
+     nav a:hover {
+          color: #fff2cc;
+     }
+
+     main {
+          max-width: 900px;
+          margin: 30px auto;
+          background: #caf4f4;
+          padding: 30px 20px;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+     }
+
+     section {
+          margin-bottom: 40px;
+     }
+
+     section h2 {
+          color: #2d3e50;
+          border-bottom: 2px solid #fd0101;
+          padding-bottom: 8px;
+          margin-bottom: 20px;
+          font-size: 1.5em;
+     }
+
+     ul {
+          list-style: none;
+          padding: 0;
+     }
+
+     li {
+          margin-bottom: 25px;
+          background: #e8eccb;
+          padding: 18px 15px;
+          border-radius: 8px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+     }
+
+     li h3 {
+          margin: 0 0 8px 0;
+          color: #030405;
+     }
+
+     li p {
+          margin: 0 0 10px 0;
+          color: #5f0a0a;
+     }
+
+     li a {
+          display: inline-block;
+          background: rgba(180, 56, 108, 0.2);
+          color: #33a306;
+          padding: 8px 18px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: 0.2s, color 0.2s;
+     }
+
+     li a:hover {
+          background: rgba(206, 2, 247, 0.705);
+          color: #ffd700;
+     }
+
+     footer {
+background: linear-gradient(135deg, #5b247a, #1bc8df);
+          color: #fcfcfc;
+          text-align: center;
+          padding: 15px 0;
+          margin-top: 40px;
+          border-radius: 0 0 10px 10px;
+          font-size: 1em;
+     }
+
+     .glow-rgb {
+          font-weight: bold;
+          background: linear-gradient(90deg, #ff0000, #00ff00, #0000ffa6, #ffff00, #ff0000);
+          background-size: 400% 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: rgb-move 9s linear infinite; /* تم إبطاء الحركة */
+     }
+     @keyframes rgb-move {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 100% 50%; }
+     }
+     /* From Uiverse.io by cssbuttons-io */
+     .course-btn {
+          margin-top: 12px;
+          display: flex;
+          justify-content: flex-start;
+     }
+     button {
+          align-items: center;
+          background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+          border: 0;
+          border-radius: 8px;
+          box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+          box-sizing: border-box;
+          color: #ffffff;
+          display: flex;
+          font-size: 18px;
+          justify-content: center;
+          line-height: 1em;
+          max-width: 100%;
+          min-width: 140px;
+          padding: 3px;
+          text-decoration: none;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          white-space: nowrap;
+          cursor: pointer;
+          transition: all 0.3s;
+     }
+
+     button:active,
+     button:hover {
+          outline: 0;
+     }
+
+     button span {
+          background-color: rgb(5, 6, 45);
+          padding: 16px 24px;
+          border-radius: 6px;
+          width: 100%;
+          height: 100%;
+          transition: 300ms;
+     }
+
+     button:hover span {
+          background: none;
+     }
+
+     button:active {
+          transform: scale(0.9);
+     }
+     /* From Uiverse.io by adamgiebl */
+     .nav-btn {
+          font-size: 18px;
+          display: inline-block;
+          outline: 0;
+          border: 0;
+          cursor: pointer;
+          will-change: box-shadow,transform;
+          background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+          box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+          padding: 0 2em;
+          border-radius: 0.3em;
+          color: #fff;
+          height: 2.6em;
+          text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+          transition: box-shadow 0.15s ease, transform 0.15s ease;
+          margin-right: 10px;
+          margin-left: 10px;
+     }
+     .nav-btn:hover {
+          box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+          transform: translateY(-0.1em);
+     }
+     .nav-btn:active {
+          box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+          transform: translateY(0em);
+     }
+     </style>
+</head>
+<body>
+     <header>
+          <h1 class="glow-rgb">ابداع اكاديمي</h1>
+          <h1 class="glow-rgb"> اختار الكورس المناسب</h1>
+          <nav>
+               <ul>
+                    <li>
+                         <button class="nav-btn" onclick="location.href='#programming'">
+                              <img src="https://cdn-icons-png.flaticon.com/128/2721/2721297.png" alt="برمجة" style="width:22px;vertical-align:middle;margin-left:6px;">
+                              برمجة
+                         </button>
+                    </li>
+                    <li>
+                         <button class="nav-btn" onclick="location.href='#design'">
+                              <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="تصميم" style="width:22px;vertical-align:middle;margin-left:6px;">
+                              تصميم
+                         </button>
+                    </li>
+                    <li>
+                         <button class="nav-btn" onclick="location.href='#languages'">
+                              <img src="https://cdn-icons-png.flaticon.com/128/3135/3135768.png" alt="لغات" style="width:22px;vertical-align:middle;margin-left:6px;">
+                              لغات
+                         </button>
+                    </li>
+               </ul>
+          </nav>
+     </header>
+
+     <main>
+     <section id="programming">
+          <h2>كورسات البرمجة</h2>
+          <ul>
+               <li>
+                    <img src="https://cdn-icons-png.flaticon.com/128/2721/2721297.png" alt="برمجة" style="width:48px;height:48px;float:left;margin-left:15px;">
+                    <h3>مقدمة في البرمجة <span style="color:green;font-size:0.9em;">(مجاني)</span></h3>
+                    <p>تعلم أساسيات البرمجة </p>
+                    <!-- زر ابدا الكورس الجديد -->
+                    <div class="course-btn">
+                         <!-- From Uiverse.io by cssbuttons-io -->
+                         <a href="https://teracourses.com/ar/categories/programming-fundamentals" target="_blank" style="all:unset;display:inline;">
+                              <button>
+                                   <span class="text">ابدأ الكورس</span>
+                              </button>
+                         </a>
+                    </div>
+               </li>
+               <li>
+                    <img src="https://cdn-icons-png.flaticon.com/128/2721/2721304.png" alt="تطوير الويب" style="width:48px;height:48px;float:left;margin-left:15px;">
+                    <h3>تطوير الويب <span style="color:green;font-size:0.9em;">(مجاني)</span></h3>
+                    <p>تعلم HTML, CSS, JavaScript لبناء مواقع الويب.</p>
+                    <div class="course-btn">
+                         <a href="https://www.coursat.org/#google_vignette" target="_blank" style="all:unset;display:inline;">
+                              <button>
+                                   <span class="text">ابدأ الكورس</span>
+                              </button>
+                         </a>
+                    </div>
+               </li>
+          </ul>
+     </section>
+
+     <section id="design">
+          <h2>كورسات التصميم</h2>
+          <ul>
+               <li>
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="تصميم جرافيكي" style="width:48px;height:48px;float:left;margin-left:15px;">
+                    <h3>أساسيات التصميم الجرافيكي <span style="color:green;font-size:0.9em;">(مجاني)</span></h3>
+                    <p>تعلم مبادئ التصميم وأساسيات الفوتوشوب.</p>
+                    <div class="course-btn">
+                         <a href="جرافك.mp4" target="_blank" style="all:unset;display:inline;">
+                              <button>
+                                   <span class="text">ابدأ الكورس</span>
+                              </button>
+                         </a>
+                    </div>
+               </li>
+               <li>
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135789.png" alt="تصميم واجهات" style="width:48px;height:48px;float:left;margin-left:15px;">
+                    <h3>تصميم واجهات المستخدم <span style="color:green;font-size:0.9em;">(مجاني)</span></h3>
+                    <p>تعلم تصميم واجهات التطبيقات والمواقع.</p>
+                    <div class="course-btn">
+                         <a href="كورس تصميم واجهة المستخدم.mp4" target="_blank" style="all:unset;display:inline;">
+                              <button>
+                                   <span class="text">ابدأ الكورس</span>
+                              </button>
+                         </a>
+                    </div>
+               </li>
+          </ul>
+     </section>
+
+     <section id="languages">
+          <h2>كورسات اللغات</h2>
+          <ul>
+               <li>
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135768.png" alt="الإنجليزية" style="width:48px;height:48px;float:left;margin-left:15px;">
+                    <h3>اللغة الإنجليزية للمبتدئين <span style="color:green;font-size:0.9em;">(مجاني)</span></h3>
+                    <p>تعلم أساسيات اللغة الإنجليزية من الصفر.</p>
+                    <div class="course-btn">
+                         <a href="https://www.youtube.com/playlist?list=PLp22-4PivYmIFAnru_L7fnMhSV5YffLTZ" target="_blank" style="all:unset;display:inline;">
+                              <button>
+                                   <span class="text">ابدأ الكورس</span>
+                              </button>
+                         </a>
+                    </div>
+               </li>
+               <li>
+                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135773.png" alt="الفرنسية" style="width:48px;height:48px;float:left;margin-left:15px;">
+                    <h3>تعلم اللغة الفرنسية <span style="color:green;font-size:0.9em;">(مجاني)</span></h3>
+                    <p>دروس مجانية لتعلم الفرنسية بسهولة.</p>
+                    <div class="course-btn">
+                         <a href="https://www.youtube.com/watch?v=Z38iS4rKjW4" target="_blank" style="all:unset;display:inline;">
+                              <button>
+                                   <span class="text">ابدأ الكورس</span>
+                              </button>
+                         </a>
+                    </div>
+               </li>
+          </ul>
+     </section>
+</main>
+
+     <footer>
+          <p>جميع الحقوق محفوظة &copy; 2024</p>
+          <p>تم الانشاء بواسطه نيوكود New Code</p>
+          <section class="contact" style="background: transparent; box-shadow: none;">
+               <ul style="background: transparent; box-shadow: none;">
+                    <li style="background: transparent; box-shadow: none; padding: 0;">
+                         <a href="https://wa.me/201016737230">
+                              <h>📞 تواصل معنا  01152088314</h>
+                         </a>
+                    </li>
+               </ul>
+          </section>
+     </footer>
+     <script>
+     document.querySelectorAll('nav a').forEach(link => {
+          link.addEventListener('click', function(e) {
+               const targetId = this.getAttribute('href').slice(1);
+               const targetSection = document.getElementById(targetId);
+               if (targetSection) {
+                    e.preventDefault();
+                    window.scrollTo({
+                         top: targetSection.offsetTop - 20,
+                         behavior: 'smooth'
+                    });
+               }
+          });
+     });
+     </script>
+</body>
+</html>
